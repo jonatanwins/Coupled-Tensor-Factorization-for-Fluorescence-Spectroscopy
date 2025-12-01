@@ -18,7 +18,7 @@ function determine_rank(MAX_RANK, NUM_RUNS)
                 % size(U{1}) = 28 x r, size(U{2}) = 251 x r, size(U{3}) = 21 x r
             X0_init = create_guess('Data', X, 'Num_Factors', r); 
             % uses lbfgsb on ||W * (X-K)||_F^2 with non-negativity constraint (lower bound 0) to fit CP model
-            [X0, ~, output] = cp_wopt(X, W, r, 'init', X0_init, 'lower', 0, 'opt', 'lbfgsb');
+            [X0, ~, output] = cp_wopt(X.*W, W, r, 'init', X0_init, 'lower', 0, 'opt', 'lbfgsb');
             
             if output.f < lowest_error % .f is the error for the computed decomposition X0
                 lowest_error = output.f; 

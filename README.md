@@ -1,6 +1,13 @@
 # Tensor Factorization for Fluorescence Spectroscopy
 
-### How to run this code on macOS
+### MATLAB Tooboxes used
+[tensortoolbox](https://www.tensortoolbox.org/)
+which includes
+[L-BFGS-B-C](https://github.com/stephenbeckr/L-BFGS-B-C).
+
+### How to run this code
+The following is for Apple silicon macOS 14.6.1 (and probably similar on Linux)
+
 Install the [tensortoolbox](https://www.tensortoolbox.org/) package for MATLAB 
 
 Compile the lbfgsb wrapper that comes with tensortoolbox, (it can also be found as a standalone package [here](https://github.com/stephenbeckr/L-BFGS-B-C).)

@@ -13,7 +13,7 @@ function run_model(rank, NUM_RUNS, tolerance)
     for i = 1:NUM_RUNS
 
         X0_init = create_guess('Data', X, 'Num_Factors', rank);
-        [X0, ~, output] = cp_wopt(X, W, rank, 'init', X0_init, 'lower', 0);
+        [X0, ~, output] = cp_wopt(X.*W, W, rank, 'init', X0_init, 'lower', 0);
         
         if output.f < best_loss
             best_loss = output.f;
