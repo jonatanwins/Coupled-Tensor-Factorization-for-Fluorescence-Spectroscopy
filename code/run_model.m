@@ -57,5 +57,5 @@ function run_model(rank, NUM_RUNS, tolerance)
 
     %% Plot factors for best model
     best_model = models{best_index};
-    plot_factors(best_model.u); % .u is the cell array of factor matrices
+    plot_factors_X(best_model.u); % .u is the cell array of factor matrices
 end

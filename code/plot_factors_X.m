@@ -1,10 +1,7 @@
-function plot_factors(data)
+function plot_factors_X(data)
 arguments
     data cell % Cell array of factor matrices from ktensor
 end
-
-    dataDir = get_data_directory();
-
     s = size(data); % shape (modes, rank)
     modes = s(1); 
 
@@ -27,6 +24,9 @@ end
         rank = s(2);
 
         subplot(3, 1, mode);
+
+        % add gridlines
+        grid on;
 
         hold on; 
         for r = 1:rank % for each of the components
@@ -54,7 +54,15 @@ end
     % Adjust layout
     sgtitle("$Rank = " + string(rank) + "$", 'Interpreter', 'latex', 'FontSize', 12);
 
-    filename = fullfile(dataDir, "figures", "factors_rank" + string(rank));
+    folder_name = "figures_part_1";
+    dataDir = get_data_directory();
+
+    % Check if filestructure exists, create if not
+    if ~exist(fullfile(dataDir, folder_name), 'dir')
+        mkdir(fullfile(dataDir, folder_name));
+    end
+
+    filename = fullfile(dataDir, folder_name, "factors_rank" + string(rank));
 
     fig = gcf;
     fig.Units = 'inches';
@@ -74,6 +82,7 @@ end
         ax.LabelFontSizeMultiplier = 1.0;
     end
 
+
     % Export as vector PDF
     exportgraphics(fig, filename + ".pdf", 'ContentType', 'vector', 'BackgroundColor', 'white');
-end
+ends
