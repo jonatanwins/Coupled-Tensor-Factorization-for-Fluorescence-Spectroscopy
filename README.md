@@ -2,13 +2,15 @@
 
 ### MATLAB Tooboxes used
 #### Part 1
-[Tensor toolbox](https://www.tensortoolbox.org/)
+[Tensor toolbox version 3.7](https://www.tensortoolbox.org/)
 which includes
 [L-BFGS-B-C](https://github.com/stephenbeckr/L-BFGS-B-C).
 #### Part 2
 Same as part 1, but also the
-[AOADMM-DataFusionFramework](https://github.com/AOADMM-DataFusionFramework/Matlab-Code) and
-[Proximity-operator](https://proximity-operator.net/)
+
+[AOADMM-DataFusionFramework](https://github.com/AOADMM-DataFusionFramework/Matlab-Code) latest commit Apr 2, 2025,  and
+
+[Proximity-operator](https://proximity-operator.net/) downloaded Dec 5, 2025.
 
 ### How to run this code
 The following is for Apple silicon macOS 14.6.1 (and probably similar on Linux)
