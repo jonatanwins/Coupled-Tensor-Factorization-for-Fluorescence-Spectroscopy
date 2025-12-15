@@ -1,10 +1,8 @@
 # Tensor Factorization for Fluorescence Spectroscopy
 
-### MATLAB Tooboxes used
+### MATLAB Toolboxes used
 #### Part 1
-[Tensor toolbox version 3.7](https://www.tensortoolbox.org/)
-which includes
-[L-BFGS-B-C](https://github.com/stephenbeckr/L-BFGS-B-C).
+[Tensor toolbox version 3.7](https://www.tensortoolbox.org/) which includes [L-BFGS-B-C](https://github.com/stephenbeckr/L-BFGS-B-C).
 #### Part 2
 Same as part 1, but also the
 
